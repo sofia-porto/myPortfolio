@@ -11,21 +11,22 @@
 :root{
     --background: rgb(240,240,240);
     --second-background: rgb(230,230,230);
-    --nav-background: rgb(164, 125, 171);
+    --nav-background: rgb(120, 77, 128);
     --nav-titles: white;
-    --body-titles: rgb(164, 125, 171);
+    --body-titles: rgb(120, 77, 128);
     --body-texts: black;
-    --projects-borders: rgb(250, 250, 250);
-    --projects-borders-hover: rgb(164, 125, 171);
-    --footer-texts: rgb(164, 125, 171);
+    --projects-borders: rgb(220, 220, 220);
+    --projects-borders-hover: rgb(120, 77, 128);
+    --footer-texts: rgb(120, 77, 128);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: rgb(24,24,24);
-        --second-background: rgb(21,21,21);
+        --background: rgb(35,35,35);
+        --second-background: rgb(32,32,32);
         --nav-background: rgba(15, 15, 15, 0.8);
         --nav-titles: rgb(164, 125, 171);
+        --body-titles: rgb(164, 125, 171);
         --body-texts: white;
         --projects-borders: rgb(49, 49, 49);
         --projects-borders-hover: rgb(164, 125, 171);
@@ -105,7 +106,7 @@ span{
 } */
 
 section{
-    min-height: 90vh;
+    height: 90vh;
     padding: 5% 10%;
 }
 #home{
@@ -155,7 +156,7 @@ section{
     gap: 1em;
 }
 .social-icons a{
-    color: #a47dab;
+    color: var(--body-titles);
     font-size: 2em;
     transition: 0.2s ease-in-out;
     cursor: pointer;
@@ -169,7 +170,7 @@ section{
     background-color: var(--background);
 }
 ::-webkit-scrollbar-thumb{
-    background: #a47dab;
+    background: var(--body-titles);
 }
 
 #projects{
@@ -179,7 +180,7 @@ section{
     text-align: center;
     font-size: 5em;
     margin: 0.5em 0;
-    color: #a47dab;
+    color: var(--body-titles);
 }
 .projects-container{
     display: grid;
@@ -211,7 +212,7 @@ section{
 }
 .box-header h1{
     font-size: 2em;
-    color: #a47dab;
+    color: var(--body-titles);
 }
 .box-header img{
     height: 2.5em;
