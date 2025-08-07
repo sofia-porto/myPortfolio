@@ -435,6 +435,7 @@ nav ul a:hover {
 .contact-form textarea {
   width: 100%;
   padding: 21px 30px;
+  color: var(--body-texts);
   background-color: var(--form-background);
   border: none;
   border-radius: 8px;
@@ -460,6 +461,13 @@ nav ul a:hover {
 
 .contact-form button:hover {
   opacity: 0.9;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-form input,
+  .contact-form textarea {
+    color: var(--body-texts);
+  }
 }
 
 /* ----------------------------------------------

@@ -131,7 +131,7 @@
             </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" onsubmit="handleForm(event)">
             <input type="text" placeholder="Name" required />
             <input type="email" placeholder="Email" required />
             <textarea rows="6" placeholder="Type your message here" required></textarea>
@@ -141,5 +141,24 @@
     </section>
 
     <script src="script.js"> </script>
+
+    <script>
+  document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop the page from reloading
+
+    const name = document.querySelector('input[placeholder="Name"]').value;
+    const email = document.querySelector('input[placeholder="Email"]').value;
+    const message = document.querySelector('textarea').value;
+
+    const subject = encodeURIComponent("Let's work together!");
+    const body = encodeURIComponent(`Hello Sofia,\n\nMy name is ${name} (${email}) and I saw your portfolio.\n\n${message}`);
+
+    const mailtoLink = `mailto:sofianporto@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
+</script>
 </body>
 </html>
